@@ -4,6 +4,7 @@
   1. Install terraform. See https://learn.hashicorp.com/tutorials/terraform/install-cli.
   2. Install aws cli. See https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html.
   3. Configure aws by running `aws configure` and put in correct information
+  4. Generate ssh key by running ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
 
 ## Create EKS cluster
   1. Run `terraform init`
