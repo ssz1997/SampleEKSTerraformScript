@@ -1,6 +1,7 @@
 # Sample EKS Terraform Script
 
 ## Prerequisites:
+  0. A machine that will be used as k8s control plane
   1. Install terraform. See https://learn.hashicorp.com/tutorials/terraform/install-cli.
   2. Install aws cli. See https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html.
   3. Configure aws by running `aws configure` and put in correct information
