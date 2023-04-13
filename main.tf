@@ -111,7 +111,7 @@ module "vpc" {
 module "eks_cluster" {
   source          = "git::https://github.com/terraform-aws-modules/terraform-aws-eks.git?ref=v17.24.0"
   cluster_name    = local.cluster_name
-  cluster_version = "1.20"
+  cluster_version = "1.22"
   // subnets         = module.vpc.private_subnets
   subnets = module.vpc.public_subnets // any problems of using public subnets?
 
@@ -125,8 +125,8 @@ module "eks_cluster" {
 
   worker_groups = [
     {
-      name                          = "0"
-      instance_type                 = "r5.4xlarge"
+      name                          = "eks"
+      instance_type                 = "r5.2xlarge"
       capacity_type                 = "SPOT"
       spot_price                    = 1
       kubelet_extra_args            = "--node-labels=node.kubernetes.io/lifecycle=spot"
