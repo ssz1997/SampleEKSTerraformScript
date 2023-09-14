@@ -21,3 +21,6 @@
   2. ec2 instance type: modify main.tf line 129
   3. Launch on-demand ec2 instances instead of spot instances: comment out main.tf line 130, 131, and 132
   4. Launch different ec2 instance types: add another worker group in the form of main.tf line 127 - 141
+
+## If using EC2
+  Above commands are in ec2-setup.sh
