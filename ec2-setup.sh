@@ -16,7 +16,7 @@ sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/
 chmod 755 kubectl
 sudo mv kubectl /usr/local/bin/
 
-sudo yum install docker
+sudo yum install -y docker
 sudo usermod -a -G docker ec2-user
 newgrp docker
 sudo systemctl enable docker.service
