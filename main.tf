@@ -127,9 +127,9 @@ module "eks_cluster" {
     {
       name                          = "eks"
       instance_type                 = "r5.2xlarge"
-      capacity_type                 = "SPOT"
-      spot_price                    = 1
-      kubelet_extra_args            = "--node-labels=node.kubernetes.io/lifecycle=spot"
+      #capacity_type                 = "SPOT"
+      #spot_price                    = 1
+      #kubelet_extra_args            = "--node-labels=node.kubernetes.io/lifecycle=spot"
       additional_userdata           = "echo foo bar"
       asg_max_size                  = 10
       asg_desired_capacity          = 2
