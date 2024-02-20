@@ -10,7 +10,7 @@
 ## Create EKS cluster
   0. Download the files in this repo
   1. Run `terraform init`
-  2. Run `terraform apply -auto-approve`. This step takes around 10-12 minutes
+  2. Run `terraform apply -auto-approve`. This step takes around 10-15 minutes. By default the EKS is deployed on 2 r5.2xlarge EC2 instances with k8s version 1.22
   3. After the cluster is created, run `aws eks update-kubeconfig --region us-east-1 --name <test-eks-xxxxxxxx>`. The name is at the end of the stdout of step 2, in the form of `test-eks-xxxxxxx`
 
 ## Destroy cluster
