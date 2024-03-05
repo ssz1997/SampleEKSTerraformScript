@@ -65,6 +65,14 @@ resource "aws_security_group" "worker_group_mgmt" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  // open port for Grafana
+  ingress {
+    description = "Grafana"
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "TCP"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 }
 
 resource "aws_security_group" "all_worker_mgmt" {
